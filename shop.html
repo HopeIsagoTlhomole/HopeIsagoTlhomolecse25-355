@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shop</title>
+
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <div class="container">
+
+    <a class="navbar-brand" href="index.html">MySite</a>
+
+    <button class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="shop.html">Shop</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="learn.html">Learn</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+
+      <div class="d-flex gap-2">
+
+        <a href="login.html"class="btn btn-outline-light">Login / Signup</a>
+        <a href="cart.html"class="btn btn-warning fw-bold">Cart</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<!-- HEADER -->
+
+<header class="py-5 bg-light text-center">
+
+  <div class="container">
+
+    <h1 class="fw-bold">Shop Our Collection</h1>
+
+    <p class="lead">
+      Explore gemstone jewelry, zodiac posters and spiritual collections
+    </p>
+
+  </div>
+
+</header>
+
+<!-- FILTER SECTION -->
+
+<section class="py-4">
+
+  <div class="container">
+
+    <div class="row g-3 align-items-center">
+
+      <div class="col-md-6">
+
+        <input type="text"
+        class="form-control"
+        placeholder="Search products...">
+
+      </div>
+
+      <div class="col-md-3">
+
+        <select class="form-select">
+
+          <option selected>
+            All Categories
+          </option>
+
+          <option>
+            Jewelry
+          </option>
+
+          <option>
+            Posters
+          </option>
+
+          <option>
+            Collections
+          </option>
+
+        </select>
+
+      </div>
+
+      <div class="col-md-3">
+
+        <select class="form-select">
+
+          <option selected>
+            Sort by
+          </option>
+
+          <option>
+            Price: Low to High
+          </option>
+
+          <option>
+            Price: High to Low
+          </option>
+
+          <option>
+            Newest
+          </option>
+
+          <option>
+            Popular
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="py-5 bg-light">
+
+  <div class="container">
+
+    <h2 class="fw-bold mb-5 text-center">
+      Products
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- PRODUCT 1 -->
+
+      <div class="col-md-3 col-sm-6">
+
+        <div class="product-card">
+
+          <img src="Images/product1.jpg.jpg"
+          class="img-fluid rounded mb-3"
+          alt="Amethyst Necklace">
+
+          <h5 class="fw-bold">
+            Amethyst Necklace
+          </h5>
+
+          <p class="text-muted mb-1">
+            Jewelry
+          </p>
+
+          <p class="fw-bold text-dark">
+            P150
+          </p>
+
+          <button class="btn btn-warning fw-bold w-100"
+          onclick="addToCart('Amethyst Necklace', 150)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 2 -->
+
+      <div class="col-md-3 col-sm-6">
+
+        <div class="product-card">
+
+          <img src="Images/product2.jpg.jpg"
+          class="img-fluid rounded mb-3"
+          alt="Rose Quartz Ring">
+
+          <h5 class="fw-bold">
+            Rose Quartz Ring
+          </h5>
+
+          <p class="text-muted mb-1">
+            Jewelry
+          </p>
+
+          <p class="fw-bold text-dark">
+            P120
+          </p>
+
+          <button class="btn btn-warning fw-bold w-100"
+          onclick="addToCart('Rose Quartz Ring', 120)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 3 -->
+
+      <div class="col-md-3 col-sm-6">
+
+        <div class="product-card">
+
+          <img src="Images/product3.jpg.jpg"
+          class="img-fluid rounded mb-3"
+          alt="Zodiac Poster">
+
+          <h5 class="fw-bold">
+            Zodiac Poster
+          </h5>
+
+          <p class="text-muted mb-1">
+            Posters
+          </p>
+
+          <p class="fw-bold text-dark">
+            P80
+          </p>
+
+          <button class="btn btn-warning fw-bold w-100"
+          onclick="addToCart('Zodiac Poster', 80)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 4 -->
+
+      <div class="col-md-3 col-sm-6">
+
+        <div class="product-card">
+
+          <img src="Images/product4.jpg.jpg"
+          class="img-fluid rounded mb-3"
+          alt="Gemstone Bracelet">
+
+          <h5 class="fw-bold">
+            Gemstone Bracelet
+          </h5>
+
+          <p class="text-muted mb-1">
+            Jewelry
+          </p>
+
+          <p class="fw-bold text-dark">
+            P100
+          </p>
+
+          <button class="btn btn-warning fw-bold w-100"
+          onclick="addToCart('Gemstone Bracelet', 100)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 5 -->
+
+      <div class="col-md-3 col-sm-6">
+
+        <div class="product-card">
+
+          <img src="Images/product5.jpg.jpg"
+          class="img-fluid rounded mb-3"
+          alt="Crystal Earrings">
+
+          <h5 class="fw-bold">
+            Crystal Earrings
+          </h5>
+
+          <p class="text-muted mb-1">
+            Jewelry
+          </p>
+
+          <p class="fw-bold text-dark">
+            P90
+          </p>
+
+          <button class="btn btn-warning fw-bold w-100"
+          onclick="addToCart('Crystal Earrings', 90)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 6 -->
+
+      <div class="col-md-3 col-sm-6">
+
+        <div class="product-card">
+
+          <img src="Images/product6.jpg.jpg"
+          class="img-fluid rounded mb-3"
+          alt="Gemstone Poster">
+
+          <h5 class="fw-bold">
+            Gemstone Poster
+          </h5>
+
+          <p class="text-muted mb-1">
+            Posters
+          </p>
+
+          <p class="fw-bold text-dark">
+            P70
+          </p>
+
+          <button class="btn btn-warning fw-bold w-100"
+          onclick="addToCart('Gemstone Poster', 70)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 7 -->
+
+      <div class="col-md-3 col-sm-6">
+
+        <div class="product-card">
+
+          <img src="Images/product7.jpg.jpg"
+          class="img-fluid rounded mb-3"
+          alt="Zodiac Collection Box">
+
+          <h5 class="fw-bold">
+            Zodiac Collection Box
+          </h5>
+
+          <p class="text-muted mb-1">
+            Collections
+          </p>
+
+          <p class="fw-bold text-dark">
+            P250
+          </p>
+
+          <button class="btn btn-warning fw-bold w-100"
+          onclick="addToCart('Zodiac Collection Box', 250)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 8 -->
+
+      <div class="col-md-3 col-sm-6">
+
+        <div class="product-card">
+
+          <img src="Images/product8.jpg.jpg"
+          class="img-fluid rounded mb-3"
+          alt="Healing Crystals Set">
+
+          <h5 class="fw-bold">
+            Healing Crystals Set
+          </h5>
+
+          <p class="text-muted mb-1">
+            Collections
+          </p>
+
+          <p class="fw-bold text-dark">
+            P300
+          </p>
+
+          <button class="btn btn-warning fw-bold w-100"
+          onclick="addToCart('Healing Crystals Set', 300)">
+            Add to Cart
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="bg-dark text-white py-4">
+
+  <div class="container text-center">
+
+    <h4 class="fw-bold">
+      FOOTER
+    </h4>
+
+    <div class="d-flex justify-content-center gap-4 mt-3 flex-wrap">
+
+      <a href="contact.html"
+      class="text-white text-decoration-none">
+        Contact
+      </a>
+
+      <a href="#"
+      class="text-white text-decoration-none">
+        Social Media
+      </a>
+
+      <a href="about.html"
+      class="text-white text-decoration-none">
+        About
+      </a>
+
+      <a href="terms.html"
+      class="text-white text-decoration-none">
+        Terms & Conditions
+      </a>
+
+    </div>
+
+    <p class="mt-4 text-secondary">
+      2026 Gemstone Art Website. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+<script src="cart.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
