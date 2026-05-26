@@ -1,15 +1,21 @@
+/* BODY STYLING */
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /* Sets the website font */
+    background-color: #ffffff; /* White background */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
 }
 
+/*  HERO SECTION */
+
 .hero {
-    height: 70vh;
-    background: url("hero.jpg.jpg") center/cover no-repeat;
-    position: relative;
+    height: 70vh; /* Hero section height */
+    background: url("hero.jpg.jpg") center/cover no-repeat; /* Hero background image */
+    position: relative; /* Allows overlay positioning */
 }
+
+/* Dark overlay on hero image */
 
 .hero::before {
     content: "";
@@ -18,36 +24,56 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.55); /* Transparent dark overlay */
 }
+
+/* Hero text positioning */
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Places text above overlay */
 }
+
+/* Hero heading shadow */
+
 .hero h1 {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
+
+/* Hero paragraph shadow */
+
 .hero p {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
+
+/* =========================
+   GENERAL SECTION SPACING
+========================= */
+
 section {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
+/* INFORMATION CARDS */
+
 .box-card {
-    border: 1px solid #ddd;
-    padding: 30px;
-    border-radius: 12px;
+    border: 1px solid #ddd; /* Light border */
+    padding: 30px; /* Internal spacing */
+    border-radius: 12px; /* Rounded corners */
     background: white;
-    transition: 0.3s;
+    transition: 0.3s; /* Smooth hover animation */
     height: 100%;
 }
 
+/* Hover effect for cards */
+
 .box-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px); /* Moves card upward */
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
+
+/* PRODUCT CARDS */
 
 .product-card {
     border: 1px solid #ddd;
@@ -55,18 +81,22 @@ section {
     border-radius: 12px;
     background: white;
     transition: 0.3s;
-    height: 100%;   
+    height: 100%;
 }
+
+/* Product card hover effect */
 
 .product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Product images */
+
 .product-card img {
     height: 180px;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Prevents image distortion */
     background: #f2f2f2;
     border-radius: 12px;
     display: flex;
@@ -77,6 +107,8 @@ section {
     font-weight: bold;
     margin-bottom: 15px;
 }
+
+/* GALLERY SECTION */
 
 .gallery-section img {
     height: 220px;
@@ -90,13 +122,17 @@ section {
     color: gray;
     font-size: 18px;
     font-weight: bold;
-    transition: 0.3s;   
+    transition: 0.3s;
 }
 
+/* Gallery image hover effect */
+
 .gallery-img:hover {
-    transform: scale(1.03);
+    transform: scale(1.03); /* Slight zoom effect */
     box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
 }
+
+/* TESTIMONIAL SECTION */
 
 .testimonial-box {
     border: 1px solid #ddd;
@@ -108,55 +144,73 @@ section {
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* FOOTER LINKS */
+
 footer a {
     transition: 0.3s;
 }
+
+/* Footer link hover effect */
 
 footer a:hover {
     color: gold !important;
     text-decoration: underline;
 }
 
+/* RESPONSIVE DESIGN */
+
 @media (max-width: 768px) {
+
     .hero {
-        height: 60vh;
+        height: 60vh; /* Smaller hero height on mobile */
     }
+
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Smaller heading */
     }
+
     .hero p {
-        font-size: 1rem;
+        font-size: 1rem; /* Smaller paragraph */
     }
 }
-.product-card button:hover{
+
+/* BUTTON HOVER EFFECT */
+
+.product-card button:hover {
     background-color: black;
     color: white;
 }
+
+/* PRODUCT PAGE IMAGES */
+
+/* Thumbnail images */
 
 .thumb-img {
     width: 90;
     height: 90;
     object-fit: cover;
-    cursor: pointer;
+    cursor: pointer; /* Mouse pointer effect */
 }
+
+/* Main product image */
+
 .product-main-img {
     max-height: 300px;
     height: auto;
     width: 100%;
     object-fit: cover;
 }
+
+/* Related product images */
+
 .related-img {
     height: 180px;
     width: 100%;
     object-fit: cover;
 }
-.product-card {
-    transition: 0.3s;
-}
-.product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.15);
-}
+
+/* Product image sizing */
+
 .product-img {
     width: 15% !important;
     height: auto !important;
@@ -164,39 +218,62 @@ footer a:hover {
     margin: 0 auto;
     object-fit: contain;
 }
+
+/* Makes images responsive */
+
 .product-card img {
     width: 100%;
 }
+
+/*  CONTACT PAGE */
+
+/* Contact banner image */
+
 .contact-banner {
     max-height: 350px;
     object-fit: cover;
     width: 100%;
 }
 
+/* Form input styling */
+
 form .form-control {
     border-radius: 10px;
     padding: 12px;
 }
+
+/* Form focus effect */
 
 form .form-control:focus {
     border-color: gold;
     box-shadow: 0px 0px 8px rgba(255, 193, 7, 0.5);
 }
 
+/* Card styling */
+
 .card {
     border: none;
     border-radius: 15px;
 }
 
+/* Warning button hover effect */
+
 .btn-warning:hover {
     background-color: black;
     color: white;
 }
+
+/* LEARN PAGE */
+
+/* Learn page banner */
+
 .learn-banner {
     max-height: 400px;
     width: 100%;
     object-fit: cover;
 }
+
+/* Learn page images */
 
 .learn-img {
     height: 220px;
